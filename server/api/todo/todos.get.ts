@@ -1,8 +1,8 @@
-interface todo {
+interface Itodo {
     id: number
     task: string
 }
-const todos:todo[] = [
+const Itodos:Itodo[] = [
     {
         id: 1,
         task: "bring Milk"
@@ -13,6 +13,18 @@ const todos:todo[] = [
     }
 ]
 
-export default defineEventHandler((event) => {
-    return todos
+import { todos  } from '../../database/schema/todo'
+import { drizzle as drizzleD1, DrizzleD1Database} from "drizzle-orm/d1"
+export default defineEventHandler(async ({context}) => {
+    const db:DrizzleD1Database = drizzleD1(context.cloudflare.env.DB)
+    try {
+        if(context.cloudflare.env) {
+          return await db.select().from(todos).all()
+        } else {
+          return Itodos
+        }
+      } catch (error) {
+        throw(error)
+      }
+    // return todos
 })
