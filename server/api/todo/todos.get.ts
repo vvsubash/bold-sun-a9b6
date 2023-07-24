@@ -16,10 +16,10 @@ const Itodos:Itodo[] = [
 import { todos  } from '../../database/schema/todo'
 import { drizzle as drizzleD1, DrizzleD1Database} from "drizzle-orm/d1"
 export default defineEventHandler(async ({context}) => {
-    const db:DrizzleD1Database = drizzleD1(context.cloudflare.env.DB)
     try {
-        if(context.cloudflare.env) {
-          return await db.select().from(todos).all()
+        if(context?.cloudflare?.env) {
+            const db:DrizzleD1Database = drizzleD1(context.cloudflare.env.DB)
+            return await db.select().from(todos).all()
         } else {
           return Itodos
         }
