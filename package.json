@@ -2,9 +2,9 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "build": "NITRO_PRESET=cloudflare-pages nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "build": "NITRO_PRESET=cloudflare-pages nuxi build",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-07-24 --proxy 3000 -- npm run dev",
