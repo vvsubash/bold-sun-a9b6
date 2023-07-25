@@ -5,10 +5,10 @@ export default defineEventHandler(async ({ context }) => {
     if (context?.cloudflare?.env) {
       const db: DrizzleD1Database = drizzleD1(context.cloudflare.env.bold_sun);
       let data = await db.insert(todos).values({
-        id: 3,
-        task: "Scratch 🐩 Back",
+        id: 2,
+        task: "Scratch Bunty Back",
       }).returning().get()
-      return "data inserted into cloudflare D1 database" + data.task;
+      return data;
     } else {
       return "Not in cloudflare env";
     }
