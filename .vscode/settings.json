@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:bold-sun-a9b6}/server/database/db.sqlite",
+            "name": "bold_sun"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

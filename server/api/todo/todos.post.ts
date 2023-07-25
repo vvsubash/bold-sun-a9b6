@@ -1,17 +1,17 @@
 import { todos } from "../../database/schema/todo";
-import { drizzle as drizzleD1, DrizzleD1Database } from "drizzle-orm/d1";
+import { useDb } from "../../utils/database_connction";
+
 export default defineEventHandler(async ({ context }) => {
   try {
-    if (context?.cloudflare?.env) {
-      const db: DrizzleD1Database = drizzleD1(context.cloudflare.env.bold_sun);
-      let data = await db.insert(todos).values({
+    let data = await useDb()
+      .insert(todos)
+      .values({
         id: 2,
         task: "Scratch Bunty Back",
-      }).returning().get()
-      return data;
-    } else {
-      return "Not in cloudflare env";
-    }
+      })
+      .returning()
+      .get();
+    return data;
   } catch (error) {
     throw error;
   }
