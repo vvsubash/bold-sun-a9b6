@@ -6,6 +6,7 @@ export default defineEventHandler(async ({context}) => {
             const db:DrizzleD1Database = drizzleD1(context.cloudflare.env.bold_sun)
             return await db.insert(todos).values(
                 {
+                    id: 3,
                     task:"Scratch Bunty Back"
                 }
             ).returning()
