@@ -9,7 +9,7 @@ export default defineEventHandler(async ({context}) => {
                     id: 3,
                     task:"Scratch Bunty Back"
                 }
-            ).returning()
+            )
         } else {
           return "Not in cloudflare env"
         }
