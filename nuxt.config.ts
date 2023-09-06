@@ -2,8 +2,16 @@
 import { createResolver } from 'nuxt/kit'
 const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true
+    }
+  },
   runtimeConfig: {
     dbDir: resolve('./server/database')
-  }
+  },
+  modules: [
+  ]
 })
