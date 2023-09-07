@@ -8,7 +8,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "migrations:generate": "drizzle-kit generate:sqlite",
-    "pages:dev": "wrangler pages dev --compatibility-date=2023-07-24 --d1=bold-sun --persist --proxy 3000 -- npm run dev",
+    "pages:dev": "wrangler pages dev --compatibility-date=2023-07-24 --d1=bold-sun --proxy 3000 npm run dev",
     "pages:deploy": "npm run build && wrangler pages deploy ./dist"
   },
   "devDependencies": {
