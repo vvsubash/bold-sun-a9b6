@@ -1,5 +1,5 @@
 import { todos } from "../../database/schema/todo";
-import { useDb } from "../../utils/database_connction";
+import { useDb } from "../../utils/database_connection";
 
 
 export default defineEventHandler(async (event) => {

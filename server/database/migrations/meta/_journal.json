@@ -43,6 +43,13 @@
       "when": 1690458569924,
       "tag": "0005_spooky_blindfold",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1694747564301,
+      "tag": "0006_whole_excalibur",
+      "breakpoints": true
     }
   ]
 }

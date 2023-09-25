@@ -13,5 +13,11 @@ export default defineNuxtConfig({
     dbDir: resolve('./server/database')
   },
   modules: [
-  ]
+  ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    }
+  }
 })
