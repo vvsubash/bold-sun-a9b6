@@ -3,5 +3,5 @@ name = "bold-sun-a9b6"
 [[d1_databases]]
 binding = "bold_sun"
 database_name = "bold-sun"
-database_id = "21fdf365-0927-4528-ab95-4aeb5acbf09a"
+database_id = "f7bf28da-d029-4497-86d8-6f59950c5f87"
 migrations_dir = "./server/database/migrations"

@@ -1,1 +1,0 @@
-ALTER TABLE todo ADD `priority` integer DEFAULT 1 NOT NULL;

@@ -1,37 +1,32 @@
 <template>
   <div>
     <h1>Hello from cloudflare</h1>
-    <!-- <div v-for="todo in data">
-        <div>
-          <span>{{todo.id}}: {{ todo.task }}</span>
-        </div>
-      </div> -->
-    {{ data }}
+    <!-- {{ data }} -->
     <form @submit.preventDefault="addTodo">
       <fieldset>
-        <label for="id">Id</label>
-        <input type="text" v-model="taskId">
+        <label for="name">employee name</label>
+        <input type="text" v-model="employeeName">
       </fieldset>
       <fieldset>
-        <label for="id">task</label>
-        <input type="text" v-model="taskTask">
+        <label for="id">Id</label>
+        <input type="text" v-model="aadharCardNumber">
       </fieldset>
     </form>
     <button @click="addTodo">Add a todo</button>
   </div>
 </template>
 <script setup lang="ts">
-const { data } = await useFetch("/api/todo/todos");
+// const { data } = await useFetch("/api/todo/todos");
 
-const taskId = ref<string>('');
-const taskTask =ref<string>('')
+const employeeName = ref<string>('');
+const aadharCardNumber =ref<string>('')
 
 const addTodo = () => {
-  useFetch("/api/todo/todos", {
+  useFetch("/api/employee/add", {
     method: "POST",
     body: {
-      id: parseInt(taskId.value),
-      task: taskTask.value,
+      name: employeeName.value,
+      aadhar_card_number: aadharCardNumber.value,
     },
   });
 };

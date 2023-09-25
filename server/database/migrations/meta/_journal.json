@@ -5,57 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1690225514966,
-      "tag": "0000_luxuriant_raider",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1690284973285,
-      "tag": "0001_dizzy_shiver_man",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1690424446705,
-      "tag": "0002_sudden_shape",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "5",
-      "when": 1690424595340,
-      "tag": "0003_fast_mentallo",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "5",
-      "when": 1690446780731,
-      "tag": "0004_dear_ben_parker",
-      "breakpoints": true
-    },
-    {
-      "idx": 5,
-      "version": "5",
-      "when": 1690458569924,
-      "tag": "0005_spooky_blindfold",
-      "breakpoints": true
-    },
-    {
-      "idx": 6,
-      "version": "5",
-      "when": 1694747564301,
-      "tag": "0006_whole_excalibur",
-      "breakpoints": true
-    },
-    {
-      "idx": 7,
-      "version": "5",
-      "when": 1695633452212,
-      "tag": "0007_chilly_speed",
+      "when": 1695635089272,
+      "tag": "0000_narrow_sage",
       "breakpoints": true
     }
   ]

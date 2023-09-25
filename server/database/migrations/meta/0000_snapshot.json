@@ -1,28 +1,43 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "df0a0fb3-5e63-4e52-9c7e-3004ccb7ab80",
+  "id": "aa3868be-9395-49fe-923d-c3226fec3c2b",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "todo": {
-      "name": "todo",
+    "employee": {
+      "name": "employee",
       "columns": {
         "id": {
           "name": "id",
           "type": "integer",
           "primaryKey": true,
           "notNull": true,
+          "autoincrement": true
+        },
+        "first_name": {
+          "name": "first_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
           "autoincrement": false
         },
-        "task": {
-          "name": "task",
+        "aadhar_card_number": {
+          "name": "aadhar_card_number",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         }
       },
-      "indexes": {},
+      "indexes": {
+        "employee_aadhar_card_number_unique": {
+          "name": "employee_aadhar_card_number_unique",
+          "columns": [
+            "aadhar_card_number"
+          ],
+          "isUnique": true
+        }
+      },
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
