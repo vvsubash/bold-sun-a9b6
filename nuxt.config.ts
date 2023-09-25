@@ -9,6 +9,7 @@ export default defineNuxtConfig({
       enabled: true
     }
   },
+  css: ['~/assets/main.css'],
   runtimeConfig: {
     dbDir: resolve('./server/database')
   },
