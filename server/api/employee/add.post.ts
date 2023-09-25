@@ -1,4 +1,4 @@
-import { employees } from "~/server/database/schema/employees.1";
+import { employees } from "~/server/database/schema/employees";
 import { useDb } from "../../utils/database_connection";
 
 
